@@ -1,43 +1,76 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(AppMiTabBar());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class AppMiTabBar extends StatelessWidget {
+  const AppMiTabBar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
+      title: "Ejemplo Tabbar Grecia Gonzalez",
       theme: ThemeData(
-        // useMaterial3: true,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MiPaginaInicial(),
     );
   }
-}
+} //fin AppMiTabBar
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
+//Stateful
+class MiPaginaInicial extends StatefulWidget {
+  const MiPaginaInicial({Key? key}) : super(key: key);
 
   @override
+  State<MiPaginaInicial> createState() => _MiPaginaInicialState();
+} //MiPaginaInicial
+
+class _MiPaginaInicialState extends State<MiPaginaInicial> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Tabbar Grecia Gonzalez"),
+          centerTitle: true,
+          bottom: TabBar(tabs: [
+            Tab(text: "Skincare", icon: Icon(Icons.face)),
+            Tab(text: "Cabello", icon: Icon(Icons.favorite)),
+            Tab(text: "Makeup", icon: Icon(Icons.add_box)),
+            Tab(text: "Contacto", icon: Icon(Icons.add_call))
+          ] //fin tabs
+              ), //fin bottomTabBar
         ),
-      ),
-    );
-  }
-}
+        body: TabBarView(children: const <Widget>[
+          Center(
+            child: Text(
+              "Agua de rosas",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
+          Center(
+            child: Text(
+              "Shampoo en barra",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
+          Center(
+            child: Text(
+              "Base de maquillaje",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
+          Center(
+            child: Text(
+              "6568277079",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+          ),
+        ] //Jardin de niños
+            ), //fin TabBarView
+      ), //fin de Scaffold
+    ); //DefaultTabController
+  } //fin widget
+} //_MiPagionaInicial
