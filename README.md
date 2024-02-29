@@ -17,3 +17,19 @@ samples, guidance on mobile development, and a full API reference.
 
 - How to use FlutLab? Please, view our https://flutlab.io/docs
 - Join the discussion and conversation on https://flutlab.io/residents
+
+- ## Ejemplo Tabbar : FlutLab - Flutter Online IDE
+
+- Link de referencia: https://codesinsider.com/flutter-tabbar-tabbarview-example-tutorial/?expand_article=1
+- https://api.flutter.dev/flutter/painting/TextStyle-class.html
+- Grecia Gonzalez: a.21308051280363@cbtis128.edu.mx
+
+- ## Resultado Aplicacion En Flutter
+- ![image](https://github.com/GonzalezBGA128/p11-Tabbar-6I/assets/144726562/bcfee392-b9ce-4a5a-9dec-ca96cf92debe)
+- ![image](https://github.com/GonzalezBGA128/p11-Tabbar-6I/assets/144726562/620e5f9c-899d-4021-b691-118446d36180)
+- ![image](https://github.com/GonzalezBGA128/p11-Tabbar-6I/assets/144726562/4655e55d-70d6-4dfb-8610-1e030220991e)
+- ![image](https://github.com/GonzalezBGA128/p11-Tabbar-6I/assets/144726562/839563e5-2b71-4fec-9b53-cea6e44fcd39)
+
+
+
+
